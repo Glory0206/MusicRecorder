@@ -36,7 +36,7 @@ public class Recording {
     private User user;
 
     @OneToMany(mappedBy = "recording", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Bookmark> bookmarks = new ArrayList<>();
+    private List<TimeTag> timeTags = new ArrayList<>();
 
     @PrePersist
     public void setRecordingDate() {

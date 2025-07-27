@@ -25,7 +25,7 @@ public class Recording {
     @Column(nullable = true)
     private String artistName;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String audioFilePath;
 
     @Column(nullable = false)
@@ -37,6 +37,9 @@ public class Recording {
 
     @OneToMany(mappedBy = "recording", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TimeTag> timeTags = new ArrayList<>();
+
+    @Column(nullable = true)
+    private Integer totalDuration;
 
     @PrePersist
     public void setRecordingDate() {

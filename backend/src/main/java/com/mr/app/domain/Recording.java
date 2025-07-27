@@ -22,7 +22,7 @@ public class Recording {
     @Column(nullable = false)
     private String songTitle;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String artistName;
 
     @Column(nullable = false)

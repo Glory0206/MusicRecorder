@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: music-recorder
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mr
+    username: postgres
+    password: ${POSTGRES_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  output:
+    ansi:
+      enabled: always
+
+server:
+  port: 8080
+
+jwt:
+  secret-key: ${JWT_SECRET_KEY}
